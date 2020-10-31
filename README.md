@@ -25,4 +25,4 @@ Lifting State Up
    > API Interaction using fetch
 
 ### 05 Friday
-* README.md - Learning Objectives
+* [README.md](https://github.com/cph-pk/3semWeek44/tree/main/05%20Friday) - Learning Objectives
