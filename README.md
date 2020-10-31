@@ -2,9 +2,9 @@
 ### 02 Tuesday
 * day1_ex
    > ES6 and React functional Components and props<br>
-1 Understanding ES6 Modules – import and export<br>
-2 Spread operator: Object and Array Destructuring<br>
-3 Composing Components
+1: Understanding ES6 Modules – import and export<br>
+2: Spread operator: Object and Array Destructuring<br>
+3: Composing Components
 * firstapp
    > Class exercise
 ### 03 Wednesday
@@ -18,9 +18,9 @@
 * Jsonserver
 * exercise-thursday-friday
    > Forms, State and CRUD<br>
-Simple form<br>
-Handling multiple inputs<br>
-Lifting State Up
+1: Simple form<br>
+2: Handling multiple inputs<br>
+3: Lifting State Up
 * react-crud-rest-exercise
    > API Interaction using fetch
 
