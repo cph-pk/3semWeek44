@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 export default function AddEditPerson(props) {
- 
+
   const [person, setPerson] = useState({ ...props.newPerson });
 
   /* Add the required changes to use Reacts "Controlled Component Pattern" 
@@ -15,9 +15,7 @@ export default function AddEditPerson(props) {
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    //alert(JSON.stringify(person));
-    console.log("AddEditPerson: " + JSON.stringify(person))
-    //setPerson(props.emptyPerson)
+    props.addEditPerson(person);
   }
 
   return (
@@ -26,7 +24,7 @@ export default function AddEditPerson(props) {
         <div className="form-group">
           <label className="control-label col-sm-3">Id:</label>
           <div className="col-sm-9">
-            <input className="form-control" readOnly id="id" />
+            <input className="form-control" readOnly id="id" value={person.id} />
           </div>
         </div>
         <div className="form-group">
@@ -35,9 +33,11 @@ export default function AddEditPerson(props) {
           </label>
           <div className="col-sm-9">
             <input
+              onChange={handleChange}
               className="form-control"
               id="name"
               placeholder="Enter Name"
+              value={person.name}
             />
           </div>
         </div>
@@ -47,10 +47,12 @@ export default function AddEditPerson(props) {
           </label>
           <div className="col-sm-9">
             <input
+              onChange={handleChange}
               type="number"
               className="form-control"
               id="age"
               placeholder="Enter age"
+              value={person.age}
             />
           </div>
         </div>
@@ -60,10 +62,12 @@ export default function AddEditPerson(props) {
           </label>
           <div className="col-sm-9">
             <input
+              onChange={handleChange}
               type="email"
               className="form-control"
               id="email"
               placeholder="Enter email"
+              value={person.email}
             />
           </div>
         </div>
@@ -73,9 +77,11 @@ export default function AddEditPerson(props) {
           </label>
           <div className="col-sm-9">
             <input
+              onChange={handleChange}
               className="form-control"
               id="gender"
               placeholder="Enter Gender"
+              value={person.gender}
             />
           </div>
         </div>
@@ -94,8 +100,8 @@ export default function AddEditPerson(props) {
           </div>
         </div>
       </form>
-      <p>Please provide me with the ability to create new persons</p>
-      <p>And update the backend when submitted</p>
+      {/* <p>Please provide me with the ability to create new persons</p>
+      <p>And update the backend when submitted</p> */}
     </div>
   );
 }

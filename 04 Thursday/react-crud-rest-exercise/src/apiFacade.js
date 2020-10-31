@@ -9,16 +9,13 @@ function apiFacade() {
   //OBSERVE fetchAny takes a url and a callback. The callback handles the data from the response body.
   function getPersons(callback) {
     // Change me to do something with data
-    
     utils.fetchAny(URL, callback);
   }
 
   function addEditPerson(person, callback) {
     //Complete me. A smart version will handle both Add and Edit, but focus on Add (POST) only first
-    //console.log(callback);
-    console.log("ApiFacade: " +JSON.stringify(person))
-    if (person.id !== null) {
-      utils.fetchAny(URL, callback, 'PUT', person);
+    if (person.id !== '') {
+      utils.fetchAny(URL + '/' + person.id, callback, 'PUT', person);
     } else {
       utils.fetchAny(URL, callback, 'POST', person);
     }
@@ -26,7 +23,7 @@ function apiFacade() {
   }
 
   function deletePerson(id, callback) {
-    //Complete me
+    utils.fetchAny(URL + '/' + id, callback, 'DELETE');
   }
 
   return {

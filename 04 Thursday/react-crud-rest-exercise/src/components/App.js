@@ -3,29 +3,31 @@ import AddEditPerson from "./AddEditPerson";
 import AllPersons from "./AllPersons";
 
 
-function App({apiFacade}) {
+function App({ apiFacade }) {
   const emptyPerson = { id: "", age: "", name: "", email: "", gender: "" };
   const [personToAddEdit, setPersonToAddEdit] = useState(emptyPerson);
-  //const [personToDelete, setPersonToDelete] = useState(emptyPerson);
   const [persons, setPersons] = useState([]);
-  
+
   useEffect(() => {
     //Change the callback to populate table (rather than just console logging)
-    apiFacade.getPersons((data)=>{console.log('DATA:',data); setPersons(data)});
-  },[]);
+    apiFacade.getPersons(setPersons);
+  }, []);
 
   const storeAddEditPerson = (person) => {
     //Call this from the AddEditPerson control with the person to Add or Edit and Add/Edit via the apiFacade
-    console.log(personToAddEdit);
-    apiFacade.addEditPerson((data)=>{console.log('AddEdit: ',data); setPersonToAddEdit(person)})
+    apiFacade.addEditPerson(person);
+    apiFacade.getPersons(setPersons);
   }
 
   const deletePerson = (id) => {
     //Call this from the AllPerson control with the id for the person to delete
-    //apiFacade.deletePerson((data)=>{console.log('Delete: ',data); setPersonToDelete(id)})
+    apiFacade.deletePerson(id);
+    apiFacade.getPersons(setPersons);
   }
 
-  const editPerson = (person) => {
+  const editPerson = (id) => {
+    const toEdit = persons.find(pers => pers.id === id);
+    setPersonToAddEdit({ ...toEdit });
     //Call thisfrom the AllPerson control with the  person to edit
     //Set the state variable personToAddEdit with this person (a clone) to make the new value flow down via props
   }

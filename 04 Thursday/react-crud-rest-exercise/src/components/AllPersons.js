@@ -14,15 +14,15 @@ export default function AllPersons(props) {
           {persons.map(person => (
             <tr key={person.id}><td style={{ fontSize: "smaller"}}>{person.id}</td><td>{person.name}</td><td>{person.age}</td><td>{person.email}</td><td>{person.gender}</td>
             <td><span style={{ fontSize: "smaller"}}>
-                <a href="/#" onClick={(e) => { e.preventDefault(); editPerson(person.id) }}>(delete,&nbsp;</a>
-                <a href="/#" onClick={(e) => { e.preventDefault(); deletePerson(person.id) }}>edit)</a>
+                <a href="/#" onClick={(e) => { e.preventDefault(); editPerson(person.id) }}>(edit,&nbsp;</a>
+                <a href="/#" onClick={(e) => { e.preventDefault(); deletePerson(person.id) }}>delete)</a>
               </span></td></tr>
           ))}
         </tbody>
       </table>
 
-      <p>Please make me show all persons in the table above</p>
-      <p>Also, update me when new items are added/edited </p>
+      {/* <p>Please make me show all persons in the table above</p>
+      <p>Also, update me when new items are added/edited </p> */}
 
     </div>
   )
