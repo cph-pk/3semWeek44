@@ -26,3 +26,4 @@ Lifting State Up
 
 ### 05 Friday
 * [README.md](https://github.com/cph-pk/3semWeek44/tree/main/05%20Friday) - Learning Objectives
+* [QuestionsForAllExercises.md](https://github.com/cph-pk/3semWeek44/blob/main/QuestionsForAllExercises.md) - Answers for all weeks exercises
