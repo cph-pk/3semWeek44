@@ -35,7 +35,7 @@ React vil huske den funktion man passer og kan derved gøre brug af den efter en
 > Ved at gøre brug af keys kan man entydigt identificere rækker i en liste. Herved opstår der ikke konflikter, når man skal finde hver enkelte række. Controlled components er når ens form data bliver afviklet af et React komponent.
 * Eks: https://github.com/cph-pk/3semWeek44/blob/main/03%20Wednesday/day2_ex/src/ListDemo.js
 
-    Her vælger jeg at henvise til hele ListDemo.jsx filen, da der her gøres brug af to komponenter. MemberTable, som indeholder MemberDemo, og dette returneres til hvor det kaldes fra. På linje 16 indsættes en key til hver table row (`<tr>`).
+    Her vælger jeg at henvise til hele ListDemo.jsx filen, da der her gøres brug af to komponenter. MemberTable, som indeholder MemberDemo, og dette returneres til hvor det kaldes fra. På linje 16 indsættes en key til hver table row `<tr>`.
 
 ### 7. Kunne forklare og demonstrere begrebet "Lifting State" i React
 > Lifting state vil sige at man løfter data fra en child til en parrent komponent. Hvis man vil have videre ført data fra en child komponent til et andet child komponent skal ens data først forbi parrent komponent. Dvs. man ikke kan gå fra child til child komponent. 
