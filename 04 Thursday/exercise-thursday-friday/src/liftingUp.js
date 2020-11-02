@@ -8,7 +8,8 @@ const redborder = {
 
 const parentborder = {
     border: '2px solid green',
-    width: '414px'
+    width: '414px',
+    margin: 'auto'
 }
 
 const blueborder = {

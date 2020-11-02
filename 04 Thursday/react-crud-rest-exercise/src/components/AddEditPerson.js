@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 export default function AddEditPerson(props) {
-
-  const [person, setPerson] = useState({ ...props.newPerson });
+  const {newPerson, emptyPerson, addEditPerson} = props;
+  const [person, setPerson] = useState({ ...newPerson });
 
   /* Add the required changes to use Reacts "Controlled Component Pattern" 
      to handle inputs related to a person */
@@ -15,7 +15,13 @@ export default function AddEditPerson(props) {
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    props.addEditPerson(person);
+    addEditPerson(person);
+    setPerson(emptyPerson);
+  }
+
+  const clearFields = (evt) => {
+    evt.preventDefault();
+    setPerson(emptyPerson);
   }
 
   return (
@@ -94,6 +100,7 @@ export default function AddEditPerson(props) {
               style={{ marginLeft: 5 }}
               type="button"
               className="btn btn-dark"
+              onClick={clearFields}
             >
               Cancel
             </button>

@@ -9,9 +9,9 @@ function App() {
   return (
     <div className="App">
       <h3>Add Content Here</h3>
-      {/* <StateDemo/> */}
+      <StateDemo/>
       {/* <Calculator/> */}
-      <FtoC />
+      {/* <FtoC /> */}
     </div>
   );
 }

@@ -57,10 +57,17 @@
       "gender": "female"
     },
     {
-      "id": "ubvrvj3",
-      "age": "34",
-      "name": "Pølse horn",
-      "email": "poelse@kasse.dk",
+      "id": "XncynFd",
+      "age": "4567",
+      "name": "Pip Fugl",
+      "email": "pip@fugl.dk",
+      "gender": "male"
+    },
+    {
+      "id": "X-bUCyK",
+      "age": "45",
+      "name": "Robin",
+      "email": "robin@somewhere.com",
       "gender": "male"
     }
   ]

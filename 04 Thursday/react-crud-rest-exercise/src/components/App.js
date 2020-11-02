@@ -49,6 +49,7 @@ function App({ apiFacade }) {
           <h3 style={{ textAlign: "center" }}>Add Persons</h3>
           <AddEditPerson
             newPerson={personToAddEdit}
+            emptyPerson={emptyPerson}
             //  Next two lines, are if you decide to use the pattern introduced in the day-2 exercises
             addEditPerson={storeAddEditPerson}
             key={personToAddEdit.id}
